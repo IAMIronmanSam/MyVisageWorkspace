@@ -1,0 +1,19 @@
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+
+export ANT_HOME=/home/iarivu/MyWorld/Utilities/Jar_Files/apache-ant-1.8.3
+
+export VISAGE_HOME=/home/iarivu/MyWorld/VisageWork/visage/dist
+
+#export SCENE_BUILDER=/home/iarivu/JavaWorld/JavaFXSceneBuilder1.0.app/Contents/Resources/Java/javafx-beans-dt.jar:Java/*"
+
+export GRADLE_HOME=/home/iarivu/MyWorld/Utilities/gradle-1.0
+
+export CLASSPATH=.:/usr/local/javafx-sdk2.2.0-beta/rt/lib/jfxrt.jar
+
+export JAVAFX_HOME=/usr/local/javafx-sdk2.2.0-beta
+
+export FORGE_HOME=/home/iarivu/MyWorld/Utilities/forge
+
+export PATH=$PATH:$VISAGE_HOME/bin:$ANT_HOME/bin:$GRADLE_HOME/bin:$FORGE_HOME/bin:$JAVA_HOME
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
