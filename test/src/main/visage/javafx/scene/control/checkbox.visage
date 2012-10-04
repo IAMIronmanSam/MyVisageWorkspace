@@ -1,0 +1,29 @@
+package visage.javafx.scene.control;
+import visage.javafx.scene.*;
+import visage.javafx.scene.control.*;
+import visage.javafx.stage.Stage;
+import visage.javafx.scene.layout.*;
+import visage.javafx.scene.text.*;
+
+
+/*Stage{
+	title:"Checkbox Test"
+        scene: Scene{
+              width:200
+              height:100
+              fill: Color.rgb(225, 255, 250)
+             
+               HBox{
+               children:[CheckBox{
+                        text:"Checkbox Test"
+                        allowIndeterminate:false
+                        indeterminate:true
+                        Selected: true
+                            },
+ TitledPane{text:"Hello",content:CheckBox{text:"TitledPaneOne"}},
+TitledPane{text:"Ji"}]}
+                            }
+                       
+                    
+}*/
+	
