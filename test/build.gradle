@@ -13,7 +13,7 @@ group = 'test'
 
 
 // Add your fully qualified Visage Main class path here
-mainVisageClass='visage.javafx.scene.effect.EffectTest'
+mainVisageClass='visage.javafx.scene.effect.Chart'
 
 
 task runVisage (type: Exec) {

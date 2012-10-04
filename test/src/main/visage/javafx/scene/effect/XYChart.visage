@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2011-2012, Visage Project
+ * All rights reserved.
+ *
+ * Redistribution or use in source or binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions or the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions or the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. Neither the name Visage nor the names of its contributors may be used
+ *    to endorse or promote products derived from this software without
+ *    specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS or CONTRIBUTORS "AS IS"
+ * or ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED or ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+ package javafx.scene.chart;
+ 
+ /** 
+ * <p>    Base class for all charts. It has 3 parts the title, legend and chartContent. The chart content is populated by the specific subclass of Chart.</p>
+ * 
+ * @author Arivazhagan Ambigapathi <arivu86@gmail.com>
+ */
+
+public abstract class XYChart<X,Y> extends Chart
+{
+	override def wrappedNode = javafx.scene.chart.XYChart<X,Y>  {};
+	public-read def wrappedXYZChart = bind wrappedNode as javafx.scene.chart.XYChart<X,Y> ;
+	
+	     /**
+	      * <p>If true then alternative vertical columns will have fills.</p>
+	      */    
+	    public var alternativeColumnFillVisible:Boolean on replace{
+		if (isInitialized(this)    or alternativeColumnFillVisible)
+		    wrappedXYZChart.setAlternativeColumnFillVisible(alternativeColumnFillVisible);
+	    }
+	    /**
+	      * <p>If true then alternative horizontal rows will have fills</p>
+	      */    
+	    public var alternativeRowFillVisible:Boolean on replace{
+		if (isInitialized(this)    or alternativeRowFillVisible)
+		    wrappedXYZChart.setAlternativeRowFillVisible(alternativeRowFillVisible);
+	    }
+	    /**
+	      * <p>True if horizontal grid lines should be drawn</p>
+	      */    
+	    public var horizontalGridLinesVisible:Boolean on replace{
+		if (isInitialized(this)    or horizontalGridLinesVisible)
+		    wrappedXYZChart.setHorizontalGridLinesVisible(horizontalGridLinesVisible);
+	    }
+	    /**
+	      * <p>If this is true and the horizontal axis has both positive and negative values then a additional axis line will be drawn at the zero point</p>
+	      */    
+	    public var horizontalZeroLineVisible:Boolean on replace{
+		if (isInitialized(this)    or horizontalZeroLineVisible)
+		    wrappedXYZChart.setHorizontalZeroLineVisible(horizontalZeroLineVisible);
+	    }
+	    /**
+	      * <p>True if vertical grid lines should be drawn.</p>
+	      */    
+	    public var verticalGridLinesVisible:Boolean on replace{
+		if (isInitialized(this)    or verticalGridLinesVisible)
+		    wrappedXYZChart.setVerticalGridLinesVisible(verticalGridLinesVisible);
+	    }
+	    /**
+	      * <p>If this is true and the vertical axis has both positive and negative values then a additional axis line will be drawn at the zero point</p>
+	      */    
+	    public var verticalZeroLineVisible:Boolean on replace{
+		if (isInitialized(this)    or verticalZeroLineVisible)
+		    wrappedXYZChart.setVerticalZeroLineVisible(verticalZeroLineVisible);
+	    }
+	    
+}
