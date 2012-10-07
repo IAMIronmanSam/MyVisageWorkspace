@@ -52,6 +52,22 @@ public abstract class Chart extends Region
     }
     
     /**
+      * <p>The node to display as the Legend.</p>
+      */    
+    public var legendSide:Side on replace{
+        if (isInitialized(this) )
+            wrappedChart.setLegendSide(legendSide);
+    }
+    
+    /**
+      * <p>The side of the chart where the title is displayed.</p>
+      */    
+    public var titleSide:Side on replace{
+        if (isInitialized(this) )
+            wrappedChart.setTitleSide(titleSide);
+    }
+    
+    /**
       * <p>The node to display as the Legend. Subclasses can set a node here to be displayed on a side as the legend. If no legend is wanted then this can be set to null.</p>
       */    
     public var legend:Node on replace{

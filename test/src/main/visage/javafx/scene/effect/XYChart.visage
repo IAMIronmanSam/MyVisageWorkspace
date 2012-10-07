@@ -39,6 +39,15 @@ public abstract class XYChart<X,Y> extends Chart
 	override def wrappedNode = javafx.scene.chart.XYChart<X,Y>  {};
 	public-read def wrappedXYZChart = bind wrappedNode as javafx.scene.chart.XYChart<X,Y> ;
 	
+	/**
+	      * <p>The node to display as the Legend.</p>
+	      */    
+	    public  var legend :Node[] on replace {
+        if (isInitialized(this) or legend!= []) {
+            wrappedXYZChart.setLegend{legend.wrappedNode});
+        }
+    }
+	    
 	     /**
 	      * <p>If true then alternative vertical columns will have fills.</p>
 	      */    
